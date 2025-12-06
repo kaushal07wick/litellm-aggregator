@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "litellm_aggregator"
+    static_configs:
+      - targets: ["host.docker.internal:8000"]   # or "localhost:8000" if not using Docker
